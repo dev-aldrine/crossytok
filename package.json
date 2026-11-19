@@ -1,0 +1,20 @@
+{
+  "name": "crossy-auto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8765",
+    "build": "vite build",
+    "preview": "vite preview --port 8765",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8",
+    "vitest": "^4.1.12"
+  }
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossy Auto — Infinite Voxel Hopper</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237dd3fc'/%3E%3Crect x='18' y='20' width='28' height='28' rx='4' fill='%23ffffff'/%3E%3Crect x='26' y='12' width='12' height='10' fill='%23ef4444'/%3E%3Crect x='26' y='30' width='12' height='8' fill='%23f59e0b'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237dd3fc'/%3E%3Crect x='18' y='20' width='28' height='28' rx='4' fill='%23ffffff'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="game-canvas" aria-label="Crossy Auto 3D game canvas"></canvas>
+
+    <div class="hud">
+      <header class="hud-top">
+        <div class="score-block">
+          <div id="score" class="score-value">0</div>
+          <div class="score-meta">
+            <span>BEST <strong id="best-score">0</strong></span>
+            <span class="dot">•</span>
+            <span>COINS <strong id="coins">0</strong></span>
+          </div>
+        </div>
+
+        <div class="goal-progress" aria-label="Finish line progress">
+          <div class="goal-label" id="goal-label">0 / 100 🏁</div>
+          <div class="goal-track">
+            <div class="goal-fill" id="goal-fill"></div>
+          </div>
+        </div>
+
+        <div id="fps-counter" class="fps-counter" hidden>60 FPS</div>
+      </header>
+
+      <div id="milestone" class="milestone" hidden>50!</div>
+
+      <div id="banner" class="banner" hidden>
+        <div class="banner-title" id="banner-title">WIPEOUT!</div>
+        <div class="banner-sub" id="banner-sub">Respawning...</div>
+      </div>
+
+      <footer class="hud-bottom">
+        <div class="controls-bar">
+          <button id="btn-mode" class="btn active" type="button" title="Toggle Auto-Play or Manual (Space)">
+            🤖 Auto
+          </button>
+          <button id="btn-skin" class="btn" type="button" title="Cycle Character Skin">
+            🐔 Skin
+          </button>
+          <button id="btn-speed" class="btn" type="button" title="Cycle Simulation Speed">
+            0.7×
+          </button>
+          <button id="btn-camera" class="btn" type="button" title="Switch Camera View">
+            📷 Iso
+          </button>
+          <button id="btn-aspect" class="btn" type="button" title="Toggle 9:16 Shorts Frame">
+            📱 9:16
+          </button>
+          <button id="btn-shaders" class="btn active" type="button" title="Toggle Minecraft-Style Shaders & Bloom">
+            ✨ Shaders
+          </button>
+          <button id="btn-fps" class="btn" type="button" title="Toggle FPS Counter">
+            📊 FPS
+          </button>
+          <button id="btn-sound" class="btn" type="button" title="Toggle Sound Effects">
+            🔇 Mute
+          </button>
+          <button id="btn-reset" class="btn" type="button" title="Restart Run (R)">
+            ↻ Reset
+          </button>
+        </div>
+        <div class="hint" id="control-hint">
+          Watching AI • Press <kbd>Space</kbd> to take over
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
